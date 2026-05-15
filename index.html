@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Добрий старт — Дитячий простір</title>
+    <meta
+      name="description"
+      content="Добрий старт — простір розвитку, творчості та безпеки для дітей. Перше заняття безкоштовне. Запис через форму або за телефоном."
+    />
+    <meta
+      name="keywords"
+      content="дитячий простір, розвиваючі заняття, підготовка до школи, творчі майстерні, дитячий центр"
+    />
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Добрий старт — Дитячий простір" />
+    <meta
+      property="og:description"
+      content="Перше безкоштовне заняття. Записуйтесь просто зараз!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <!-- Favicon -->
+    <link rel="icon" href="/img/logo/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    </noscript>
+    <!-- JSON-LD - structured data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Добрий старт",
+        "url": "https://tarascoder.github.io/good-start/",
+        "telephone": "+380936978118",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "вул. Городоцька, 319а",
+          "addressLocality": "Львів",
+          "addressCountry": "UA"
+        },
+        "sameAs": [
+          "https://instagram.com/",
+          "https://facebook.com/",
+          "https://youtube.com/"
+        ]
+      }
+    </script>
+    <!-- Connecting CSS, JS -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Accessibility: skip link -->
+    <a
+      href="#signup"
+      class="badge"
+      style="
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      "
+      >Перейти до форми запису</a
+    >
+    <header>
+      <div class="container nav">
+        <a href="#top" class="logo" aria-label="Добрий старт — на головну">
+          <picture>
+            <source srcset="./img/logo/logo.webp" type="image/webp" />
+            <img src="./img/logo/logo.png" alt="Добрий старт — Дитячий простір" />
+          </picture>
+        </a>
+        <nav class="nav-links" aria-label="Головне меню">
+          <a href="#about">Про нас</a>
+          <a href="#programs">Програми</a>
+          <a href="#gallery">Галерея</a>
+          <a href="#reviews">Відгуки</a>
+          <a href="#contacts">Контакти</a>
+          <a href="#signup" class="btn btn-primary free_sign_btn"
+            >Безкоштовне заняття</a
+          >
+        </nav>
+        <div class="phone">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.3 1.78.57 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.09a2 2 0 0 1 2.11-.45c.85.27 1.73.45 2.63.57A2 2 0 0 1 22 16.92z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <a id="phoneLink" href="tel:+380936978118">+380 93 697 8118</a>
+        </div>
+        <button
+          class="hamburger"
+          aria-label="Меню"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+        </button>
+      </div>
+      <div class="container mobile-menu" id="mobile-menu">
+        <a href="#about">Про нас</a>
+        <a href="#programs">Програми</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#contacts">Контакти</a>
+        <a href="#signup" class="btn btn-primary">Записатися</a>
+      </div>
+    </header>
+
+    <picture class="hidden_logo">
+      <source srcset="./img/logo/logo.webp" type="image/webp" />
+      <img src="./img/logo/logo.png" alt="logo" />
+    </picture>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container wrap">
+          <div>
+            <div class="badge">Перше заняття безкоштовно</div>
+            <h1 class="headline">
+              Добрий старт у розвитку та творчості вашої дитини
+            </h1>
+            <p class="sub">
+              Працюємо з любов'ю на результат. Простір, де діти відкривають
+              здібності, а батьки — спокій.
+            </p>
+            <div class="hero-card">
+              <ul class="list">
+                <p class="sub_header">Чому саме ми?</p>
+                <li>
+                  <span class="dot" aria-hidden="true"></span
+                  ><span>Кваліфіковані педагоги - з досвідом та щирим серцем</span>
+                </li>
+                <li>
+                  <span class="dot" aria-hidden="true"></span
+                  ><span
+                    >Комплексна підготовка до школи</span
+                  >
+                </li>
+                <li>
+                  <span class="dot" aria-hidden="true"></span
+                  ><span>Програми раннього розвитку для дітей від 2 років</span>
+                </li>
+                <li>
+                  <span class="dot" aria-hidden="true"></span
+                  ><span>Маленькі групи - увага кожній дитині, індивідуальний підхід.</span>
+                </li>
+                <li>
+                  <span class="dot" aria-hidden="true"></span
+                  ><span>Християнські цінності - виховання з акцентом на доброту, вдячність та духовний розвиток.</span>
+                </li>
+              </ul>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="#signup" class="btn btn-primary"
+                  >Записатися на безкоштовне заняття</a
+                >
+                <a href="#programs" class="btn btn-secondary"
+                  >Наші програми</a
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <picture>
+              <source srcset="./img/img/0.webp" type="image/webp" />
+              <img
+                src="./img/img/0.jpg"
+                alt="Щасливі діти в Доброму старті"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="container about">
+          <h2 class="section-title">Про нас</h2>
+
+          <!-- Місія -->
+          <div class="about-mission">
+            <h3>Наша місія</h3>
+            <p>
+              У «Доброму старті» панує атмосфера радості, турботи та відкриттів - кожен день наповнений цікавими заняттями, новими знаннями та духовними цінностями.
+            </p>
+            <p><strong>СТАРТ - це завжди початок!</strong></p>
+            <p>Ми прагнемо забезпечити <strong>гармонійний розвиток кожної дитини</strong>, поєднуючи <strong>навчання</strong>, <strong>творчість</strong> і <strong>християнські принципи</strong>, які формують характер і моральні цінності.</p>
+            <ul>
+              <p>Ми дбаємо про:</p>
+              <li> 🧠 Ментальне та фізичне здоров’я дітей</li>
+              <li> 🎲 Навчання через гру</li>
+              <li> 🌟 Розвиток здібностей та талантів</li>
+              <li> 🤝 Спілкування з друзями</li>
+              <li> 🌍 Взаємодія з навколишнім світом</li>
+              <li> ❤️ Любов до Батьківщини</li>
+              <li> ✝️ Пізнання Бога та виховання на християнських цінностях</li>
+            </ul>
+          </div>
+
+          <!-- Пропозиція -->
+          <div class="about-services">
+            <h3>Що ми пропонуємо</h3>
+            <ul>
+              <li>Підготовка до школи (5–6 років)</li>
+              <li>Заняття раннього розвитку (3–4 роки)</li>
+              <li>Англійська, музика, катехизація, математика 🎼💃</li>
+              <li>Соціальна адаптація та розвиток креативного мислення</li>
+              <li>Розвиток творчих здібностей і дрібної моторики 🎨</li>
+              <li>Індивідуальний підхід та унікальна методика</li>
+              <li>Любов, турбота та щасливе дитинство ❤️</li>
+            </ul>
+          </div>
+
+          <!-- Переваги -->
+          <div class="about-advantages">
+            <h3>Переваги</h3>
+            <ul>
+              <li><strong>15-річний досвід роботи</strong> — роки успішного розвитку та підготовки дітей.</li>
+              <li><strong>Педагоги з практикою у закладах Польщі</strong> — сучасні методики та міжнародний досвід.</li>
+              <li><strong>Індивідуальний підхід до навчання</strong> - увага до особливостей кожної дитини та розвиток її сильних сторін.</li>
+              <li><strong>Великий спектр послуг</strong> - програми підготовки до школи, ранній розвиток, гуртки, творчі та мовні заняття.</li>
+              <li><strong>Виховання на основі християнських цінностей</strong> - доброта, щирість, любов до ближнього та духовний розвиток.</li>
+              <li><strong>Маленькі групи та комфортна атмосфера</strong> - безпека та увага до кожної дитини.</li>
+              <li><strong>Комплексний підхід до розвитку</strong> - когнітивні, мовні, сенсорні та моторні навички.</li>
+              <li><strong>Прозорість та довіра батьків</strong> - фото- та відео звіти про життя та досягнення дітей.</li>
+            </ul>
+          </div>
+
+          <p class="about-cta">
+            Приєднуйтесь до нашої великої, дружньої та креативної родини 😍
+          </p>
+        </div>
+      </section>
+
+
+      <!-- PROGRAMS -->
+      <section id="programs">
+        <div class="container">
+          <h2 class="section-title">НАШІ ПРОГРАМИ</h2>
+          <!-- <p class="section-sub">
+            Оберіть напрям для вашої дитини. Порадимо і допоможемо зі стартом.
+          </p> -->
+          <div class="grid grid-3">
+            <!-- Card -->
+            <div class="card">
+              <h3>ПІДГОТОВКА ДО ШКОЛИ (5-6 років)</h3>
+              <h4><strong>Комплексна програма для впевненого старту у школі.</strong></h4>
+              <ul>
+                <li>Англійська мова</li>
+                <li>Читання та письмо</li>
+                <li>Математика</li>
+                <li>Музика та творчість</li>
+                <li>Катехизація</li>
+                <li>Соціальні навички та самостійність</li>
+                <li>Тематичні свята</li>
+                <li>Підтримка самостійності та творчості</li>
+                <li>Розвиток дрібної моторики</li>
+                <li>Розвиток когнітивних та соціальних навичок</li>
+              </ul>
+            </div>
+            <!-- Card -->
+            <div class="card">
+              <h3>РАННІЙ РОЗВИТОК (4 роки)</h3>
+              <h4><strong>Пізнання світу через гру та творчість.</strong></h4>
+              <ul>
+                <li>Катехизація</li>
+                <li>Англійська мова</li>
+                <li>Ігрова математика</li>
+                <li>Підготовка руки до письма</li>
+                <li>Ознайомлення з буквами та цифрами</li>
+                <li>Музично-ритмічні заняття</li>
+                <li>Творчість та розвиток уяви</li>
+              </ul>
+            </div>
+            <!-- Card -->
+            <div class="card">
+              <h3>ЗАНЯТТЯ “МАМА І Я” (2-3 роки)</h3>
+              <h4><strong>Перші кроки у навчанні разом із батьками</strong></h4>
+              <ul>
+                <li>Соціалізація</li>
+                <li>Мовний розвиток</li>
+                <li>Розвиток дрібної моторики</li>
+                <li>Творчі заняття: ліплення, малювання, аплікація</li>
+                <li>Тренуємо увагу і памʼять</li>
+              </ul>
+            </div>
+            <!-- Card -->
+            <div class="card">
+              <h3>САДОЧОК ПОВНОГО ТА НЕПОВНОГО ДНЯ (2-6 років)</h3>
+              <h4><strong>Простір турботи, розвитку та духовних цінностей.</strong></h4>
+              <p>Перебування: з 8:30 до 14:00 або з 8:30 до 19:00.</p>
+              <ul>
+                <li>Англійська мова - перші кроки у вивченні мови через ігри та пісні.</li>
+                <li>Катехизація та Свята Літургія - знайомство з християнськими цінностями у ніжній, доступній формі.</li>
+                <li>Заняття з розвитку та підготовки до школи - логіка, мислення, підготовка руки до письма.</li>
+                <li>Хореографія, творчий розвиток, музичне мистецтво - рух, ритм та самовираження.</li>
+                <li>Сенсорний та мовленнєвий розвиток - вправи для координації, уваги та мови.</li>
+                <li>Щоденні прогулянки - свіже повітря та рухова активність.</li>
+                <li>Збалансоване харчування - корисне меню для енергії і росту.</li>
+                <li>Тематичні свята та події - формування спільноти, радості та традицій.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="gallery">
+        <div class="container">
+          <h2 class="section-title">Галерея</h2>
+          <p class="section-sub">
+            Наші яскраві моменти
+          </p>
+
+          <div class="gallery" aria-label="Фотогалерея">
+            <picture>
+              <source srcset="./img/img/4.webp" type="image/webp" />
+              <img src="./img/img/4.jpg" alt="Фото з заняття в Доброму старті" loading="lazy" decoding="async" />
+            </picture>
+
+            <picture>
+              <source srcset="./img/img/5.webp" type="image/webp" />
+              <img src="./img/img/5.jpg" alt="Фото з заняття в Доброму старті" loading="lazy" decoding="async" />
+            </picture>
+
+            <picture>
+              <source srcset="./img/img/6.webp" type="image/webp" />
+              <img src="./img/img/6.jpg" alt="Фото з заняття в Доброму старті" loading="lazy" decoding="async" />
+            </picture>
+
+            <picture>
+              <source srcset="./img/img/7.webp" type="image/webp" />
+              <img src="./img/img/7.jpg" alt="Фото з заняття в Доброму старті" loading="lazy" decoding="async" />
+            </picture>
+
+            <picture>
+              <source srcset="./img/img/2.webp" type="image/webp" />
+              <img src="./img/img/2.jpg" alt="Фото з заняття в Доброму старті" loading="lazy" decoding="async" />
+            </picture>
+
+            <picture>
+              <source srcset="./img/img/1.webp" type="image/webp" />
+              <img src="./img/img/1.jpg" alt="Фото з заняття в Доброму старті" loading="lazy" decoding="async" />
+            </picture>
+
+            <picture>
+              <source srcset="./img/img/8.webp" type="image/webp" />
+              <img src="./img/img/8.jpg" alt="Фото наші цінності" loading="lazy" decoding="async" />
+            </picture>
+
+            <picture>
+              <source srcset="./img/img/3.webp" type="image/webp" />
+              <img src="./img/img/3.jpg" alt="Фото з заняття в Доброму старті" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+
+          <div
+            class="card"
+            style="
+              margin-top: 16px;
+              max-width: 600px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            <div
+              style="
+                position: relative;
+                padding-bottom: 178%; /* зберігаємо вертикальне співвідношення */
+                height: 0;
+                overflow: hidden;
+                border-radius: 12px;
+              "
+            >
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FDobryjStart%2Fvideos%2F1224480016357273%2F&show_text=false&width=267&t=0"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                  overflow: hidden;
+                "
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section id="reviews">
+        <div class="container">
+          <h2 class="section-title">Відгуки батьків</h2>
+          <div class="testimonials">
+            <div class="quote">
+              <p>
+                «Дитина біжить на заняття із задоволенням! Педагоги уважні, а
+                атмосфера — як друга домівка.»
+              </p>
+              <div class="who">
+                <div class="avatar" aria-hidden="true"></div>
+                <div>
+                  <strong>Олена</strong><br /><span class="hint"
+                    >мама Марка, 5 років</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="quote">
+              <p>
+                «За місяць син навчився концентруватися та краще спілкуватися з
+                однолітками. Дуже вдячні!»
+              </p>
+              <div class="who">
+                <div class="avatar" aria-hidden="true"></div>
+                <div>
+                  <strong>Ігор</strong><br /><span class="hint"
+                    >тато Андрія, 6 років</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="quote">
+              <p>
+                «Найкраще місце для творчості: багато матеріалів, продумані
+                завдання та ніжне ставлення до дітей.»
+              </p>
+              <div class="who">
+                <div class="avatar" aria-hidden="true"></div>
+                <div>
+                  <strong>Катерина</strong><br /><span class="hint"
+                    >мама Софії, 4 роки</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA / SIGNUP FORM -->
+        <div class="container" id="signup">
+          <h2 id="signup-title" class="section-title">
+            Запишіться на перше безкоштовне заняття
+          </h2>
+          <p class="section-sub">
+            Залиште контакти — передзвонимо, підберемо групу та відповімо на
+            запитання.
+          </p>
+          <div class="form-card">
+            <form id="leadForm" name="contact" netlify novalidate>
+              <div class="row">
+                <div>
+                  <label for="parent">Ваше ім'я</label>
+                  <input
+                    id="parent"
+                    name="parent"
+                    type="text"
+                    placeholder="Напр. Оксана"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="phone">Телефон</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+38 (0__) ___-__-__"
+                    required
+                  />
+                  <!-- <div class="hint">Ми не передаємо дані третім сторонам.</div> -->
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <label for="child">Ім'я дитини</label>
+                  <input
+                    id="child"
+                    name="child"
+                    type="text"
+                    placeholder="Напр. Марко"
+                  />
+                </div>
+                <div>
+                  <label for="age">Вік дитини</label>
+                  <select id="age" name="age">
+                    <option value="">Оберіть</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="message">Коментар (необов'язково)</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="3"
+                  placeholder="Зручний час, питання тощо"
+                ></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">
+                Надіслати заявку
+              </button>
+              <div class="success" id="formSuccess">
+                Дякуємо! Заявку надіслано. Ми зв'яжемось найближчим часом.
+              </div>
+              <div class="error" id="formError">
+                Упс! Перевірте поля форми та спробуйте ще раз.
+              </div>
+            </form>
+          </div>
+          <p class="hint" style="margin-top: 10px;">
+            Натискаючи «Надіслати заявку», ви погоджуєтесь із обробкою персональних
+            даних.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACTS -->
+      <section id="contacts">
+        <div class="container contact">
+          <div>
+            <h2 class="section-title">Контакти</h2>
+            <p class="section-sub">
+              Чекаємо вас у нашому просторі. Телефонуйте або пишіть у зручний
+              месенджер.
+            </p>
+            <div class="card" style="margin-bottom: 12px;">
+              <p>
+                <strong>Телефон:</strong>
+                <a href="tel:+380936978118" id="phoneLink2">+380 93 697 8118</a>
+              </p>
+              <p>
+                <strong>Адреса:</strong>
+                <span id="address">вул. Городоцька, 319а, Львів</span>
+              </p>
+              <p class="social">
+                <a
+                  href="https://www.instagram.com/dobryy_start/"
+                  aria-label="Instagram"
+                  ><i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                  Instagram</a
+                >
+                <a
+                  href="https://www.facebook.com/DobryjStart/?locale=uk_UA"
+                  aria-label="Facebook"
+                  ><i
+                    class="fa fa-facebook-square fa-2x"
+                    aria-hidden="true"
+                  ></i>
+                  Facebook</a
+                >
+              </p>
+            </div>
+            <div class="card">
+              <h3 style="margin: 0 0 8px;">Питання від батьків</h3>
+              <details
+                ><summary><strong>Чи можна долучитись до навчання під час року?</strong></summary>
+                <p>
+                  Так, можна. Ми приймаємо дітей протягом навчального року за умови наявності вільних місць. Особливу увагу приділяємо адаптації кожної дитини, щоб інтеграція відбувалася легко та комфортно.
+                </p></details
+              >
+              <details
+                ><summary><strong>Чи може моя дитина відвідувати лише гуртки у «Доброму старті», не навчаючись тут?</strong></summary>
+                <p>
+                  Так. Усі освітні гуртки, зазначені на нашому сайті, відкриті для всіх охочих, незалежно від основного навчання.
+                </p></details
+              >
+              <details
+                ><summary><strong>Що потрібно взяти з собою на перше заняття?</strong></summary>
+                <p>Радимо підготувати для дитини:</p>
+                <ul>
+                  <li>змінне взуття</li>
+                  <li>пляшечку з водою</li>
+                  <li>гарний настрій 🙂</li>
+                </ul>
+              </details>
+              <details
+                ><summary><strong>Чи можуть батьки бути присутні на заняттях разом з дитиною?</strong></summary>
+                <p>Так. У період адаптації ми із задоволенням запрошуємо батьків залишатися поруч, щоб перші заняття були максимально спокійними та приємними для дитини.</p>
+              </details>
+            </div>
+          </div>
+          <div>
+            <iframe class="map" title="Карта розташування Добрий старт" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1819.9871987820566!2d23.950333751784516!3d49.82647348099167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae7194c78cec9%3A0xddcdeed37dd046eb!2z0JPRgNC-0LzQsNC00YHRjNC60LAg0J7RgNCz0LDQvdGW0LfQsNGG0ZbRjyAi0JTQuNGC0Y_Rh9C40Lkg0L_RgNC-0YHRgtGW0YAg0JTQvtCx0YDQuNC5INGB0YLQsNGA0YIi!5e0!3m2!1suk!2sua!4v1778838384922!5m2!1suk!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a
+      class="btn btn-primary floating-call"
+      href="tel:+380936978118"
+      aria-label="Подзвонити"
+      >Подзвонити</a
+    >
+    <!-- <footer>
+      <div class="container footer-grid">
+        <div>
+          <strong>Добрий старт</strong> — дитячий простір розвитку та
+          творчості.<br />
+          <span class="hint"
+            >© <span id="year"></span> Усі права захищено.</span
+          >
+        </div>
+        <div>
+          <strong>Юридична інформація</strong>
+          <p class="hint">Публічна оферта · Політика конфіденційності</p>
+        </div>
+        <div>
+          <strong>Контакти</strong>
+          <p class="hint">
+            <a href="mailto:prostir.dobryjstart@gmail.com" id="email"
+              >prostir.dobryjstart@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer> -->
+    <footer>
+      <div class="container footer-flex">
+        <div class="footer-left">
+          <strong>Добрий старт</strong> — дитячий простір розвитку та творчості.<br />
+          <p class="hint">© <span id="year"></span> Усі права захищено.</p>
+        </div>
+
+        <div class="footer-right">
+          <strong>Контакти</strong>
+          <p class="hint">
+            <a href="mailto:prostir.dobryjstart@gmail.com" id="email">
+              prostir.dobryjstart@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
