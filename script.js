@@ -9,12 +9,25 @@ const CONFIG = {
 const hamburger = document.querySelector(".hamburger");
 const mobileMenu = document.getElementById("mobile-menu");
 
-hamburger?.addEventListener("click", () => {
-  mobileMenu.classList.toggle("open");
-  hamburger.classList.toggle("open");
-  const isOpen = mobileMenu.classList.contains("open");
-  hamburger.setAttribute("aria-expanded", String(isOpen));
-});
+// hamburger?.addEventListener("click", () => {
+//   mobileMenu.classList.toggle("open");
+//   hamburger.classList.toggle("open");
+//   const isOpen = mobileMenu.classList.contains("open");
+//   hamburger.setAttribute("aria-expanded", String(isOpen));
+// });
+const toggleMenu = (forceClose = false) => {
+  if (forceClose) {
+    mobileMenu.classList.remove("open");
+    hamburger.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", "false");
+  } else {
+    mobileMenu.classList.toggle("open");
+    hamburger.classList.toggle("open");
+    const isOpen = mobileMenu.classList.contains("open");
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+  }
+};
+hamburger?.addEventListener("click", () => toggleMenu());
 // When clicking outside menu, js should hide burger menu
 document.addEventListener("click", (e) => {
   if (
@@ -190,18 +203,24 @@ document.querySelectorAll("section .container > *").forEach((el) => {
 // Helping header not to stay before section title on pressing on any navigation links
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute("href"));
-    if (target) {
-      const headerOffset = document.querySelector("header").offsetHeight - 50;
-      const elementPosition = target.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
+    const id = link.getAttribute("href");
+    if (id && id.length > 1) {
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        
+        // Закриваємо меню, якщо воно було відкрите
+        if (typeof toggleMenu === 'function') toggleMenu(true);
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+        const headerOffset = document.querySelector("header").offsetHeight - 50;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
     }
   });
 });

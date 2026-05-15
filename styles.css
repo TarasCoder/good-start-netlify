@@ -637,6 +637,19 @@ footer {
   }
 }
 @media (max-width: 875px) {
+  footer {
+    padding-bottom: 100px; 
+  }
+  
+  .footer-flex {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
   .nav {
     padding-top: 35px;
   }
