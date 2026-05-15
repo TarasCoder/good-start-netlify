@@ -442,6 +442,28 @@ section {
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
 }
+/* Testimonials btn (more) */
+.reviews-more {
+  text-align: center;
+  margin-top: 30px;
+}
+.btn-more, 
+.btn-more:visited {
+  color: #111;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  opacity: 1;
+  display: inline-block;
+}
+
+.btn-more:hover {
+  background: var(--card);
+  transform: translateY(-2px);
+  color: var(--accent);
+}
+.btn-more:active {
+  transform: translateY(0);
+}
 /* CTA / Form */
 .cta {
   background: linear-gradient(180deg, #f0fdf4, #ffffff);
